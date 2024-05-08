@@ -2,6 +2,7 @@
   "name": "phat-gpt-template",
   "version": "0.0.1",
   "license": "MIT",
+  "type": "module",
   "engines": {
     "node": ">=18"
   },
@@ -12,6 +13,7 @@
     "publish": "phat-fn build --experimentalAsync && tsx scripts/publish.ts"
   },
   "devDependencies": {
+    "@apillon/sdk": "^3.0.0",
     "@phala/fn": "^0.2.19",
     "dotenv": "^16.4.5",
     "tsx": "^4.7.1",

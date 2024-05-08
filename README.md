@@ -127,10 +127,15 @@ Upon a successful upload, the command should show the URL to access your AI Agen
 >
 > Make sure to add your secrets to ensure your AI Agent works properly.
 
-<details>
-<summary>New to thirdweb?</summary>
-We use <a href="https://thirdweb.com/dashboard/infrastructure/storage">thirdweb Storage</a> to host IPFS contents. If you are new to thirdweb, the command will guide you to create your account or login to your existing account from the browser. (You may need to forward port 8976 if you are accessing a remote console via SSH.)
-</details>
+### New to Apillon?
+We use <a href="https://wiki.apillon.io/build/5-apillon-sdk.html#requirements">Apillon Storage</a> to host IPFS contents. If you are new to Apillon, signup for an account here https://app.apillon.io/dashboard and create your first bucket. 
+
+You will need to set the following environment variables:
+```text
+APILLON_API_KEY="Your Apillon API Key"
+APILLON_API_SECRET="Your Apillon API Secret Key"
+APILLON_S3_BUCKET_UUID="Your S3 Bucket Created in Apillon Dashboard"
+```
 
 ### Access the Published AI Agent
 
