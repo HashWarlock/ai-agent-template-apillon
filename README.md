@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://github.com/Phala-Network/ai-agent-template-openai">
-    <h1>AI Agent Contract Template with OpenAI</h1>
+  <a href="https://github.com/Phala-Network/ai-agent-template-apillon">
+    <h1>AI Agent Contract Template with Apillon</h1>
     <img height="320" src="./public/AI-Agent-Contract.jpg" />
     <br />
   </a>
@@ -11,12 +11,12 @@
   <p align="center">
     Host your AI Agent Contract on Phala's decentralized serverless cloud.
     <br />
-    <a href="https://github.com/Phala-Network/ai-agent-template-openai"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Phala-Network/ai-agent-template-apillon"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0?key=c0c0105ba56276cd&chatQuery=When%20did%20humans%20land%20on%20the%20moon">View Demo</a>
     ·
-    <a href="https://github.com/Phala-Network/ai-agent-template-openai/issues">Report Bug</a>
+    <a href="https://github.com/Phala-Network/ai-agent-template-apillon/issues">Report Bug</a>
     ·
     <a href="https://discord.gg/DXGGJajW">Discord</a>
   </p>
@@ -31,7 +31,7 @@
   <img height="240" src="https://www.jlwranglerforums.com/forum/attachments/zoolander-gif.325299/">
 </div>
 
-The OpenAI AI Agent template is a **MINIMAL** template to build an AI Agent that can be hosted on Phala Network's decentralized hosting protocol. Unlike Vercel or other FaaS, it allows you to publish your AI Agent compiled code to IPFS and hosts it on a fully decentralized FaaS cloud with the following benefits:
+The Apillon AI Agent template is a **MINIMAL** template to build an AI Agent that can be hosted on Phala Network's decentralized hosting protocol. Unlike Vercel or other FaaS, it allows you to publish your AI Agent compiled code to IPFS and hosts it on a fully decentralized FaaS cloud with the following benefits:
 
 - 💨 Ship Fast: Build and ship with familiar toolchain in minutes
 - ⛑️ Secure: Execution guarded by rock solid TEE / Intel SGX
@@ -122,12 +122,7 @@ Upload your compiled AI Agent code to IPFS.
 npm run publish
 ```
 
-Upon a successful upload, the command should show the URL to access your AI Agent.
-> AI Agent deployed at: https://agents.phala.network/ipfs/QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0
->
-> Make sure to add your secrets to ensure your AI Agent works properly.
-
-### New to Apillon?
+#### New to Apillon?
 We use <a href="https://wiki.apillon.io/build/5-apillon-sdk.html#requirements">Apillon Storage</a> to host IPFS contents. If you are new to Apillon, signup for an account here https://app.apillon.io/dashboard and create your first bucket. 
 
 You will need to set the following environment variables:
@@ -135,6 +130,31 @@ You will need to set the following environment variables:
 APILLON_API_KEY="Your Apillon API Key"
 APILLON_API_SECRET="Your Apillon API Secret Key"
 APILLON_S3_BUCKET_UUID="Your S3 Bucket Created in Apillon Dashboard"
+```
+
+Upon a successful upload, the command should show the URL to access your AI Agent.
+```
+npm run publish
+
+> phat-gpt-template@0.0.1 publish
+> phat-fn build --experimentalAsync && tsx scripts/publish.ts
+
+✓ Compiled successfully.
+  51.37 KB  dist/index.js
+Preparing to upload 1 files...
+Total files to upload: 1
+File uploaded: index.js
+2024-05-08T13:41:17.485Z:  File upload complete.
+Closing upload session...
+2024-05-08T13:41:18.843Z:  Upload session ended.
+null
+Checking for published CID {"API_PREFIX":"/storage/buckets/ee410fe7-bdb0-4308-9ee3-b74cec5f6dab/files/0df84471-fa8f-4c8e-9fab-e943d47237d6","createTime":"2024-05-08T13:41:18.000Z","updateTime":"2024-05-08T13:41:18.000Z","uuid":"0df84471-fa8f-4c8e-9fab-e943d47237d6","bucketUuid":"ee410fe7-bdb0-4308-9ee3-b74cec5f6dab","directoryUuid":null,"name":"index.js","CID":null,"status":2,"type":2,"link":null,"path":null}
+Checking for published CID {"API_PREFIX":"/storage/buckets/ee410fe7-bdb0-4308-9ee3-b74cec5f6dab/files/0df84471-fa8f-4c8e-9fab-e943d47237d6","createTime":"2024-05-08T13:41:18.000Z","updateTime":"2024-05-08T13:41:18.000Z","uuid":"0df84471-fa8f-4c8e-9fab-e943d47237d6","bucketUuid":"ee410fe7-bdb0-4308-9ee3-b74cec5f6dab","directoryUuid":null,"name":"index.js","CID":null,"status":2,"type":2,"link":null,"path":null}
+Checking for published CID {"API_PREFIX":"/storage/buckets/ee410fe7-bdb0-4308-9ee3-b74cec5f6dab/files/0df84471-fa8f-4c8e-9fab-e943d47237d6","createTime":"2024-05-08T13:41:18.000Z","updateTime":"2024-05-08T13:41:29.000Z","uuid":"0df84471-fa8f-4c8e-9fab-e943d47237d6","bucketUuid":"ee410fe7-bdb0-4308-9ee3-b74cec5f6dab","directoryUuid":null,"name":"index.js","CID":"bafkreibn2k2pr7i5ufm5yzizmuxayleqv4khb7rrsdatbpowd7syc3vady","status":3,"type":2,"link":"https://bafkreibn2k2pr7i5ufm5yzizmuxayleqv4khb7rrsdatbpowd7syc3vady.ipfs.nectarnode.io/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaWQiOiJiYWZrcmVpYm4yazJwcjdpNXVmbTV5eml6bXV4YXlsZXF2NGtoYjdycnNkYXRicG93ZDdzeWMzdmFkeSIsInByb2plY3RfdXVpZCI6ImFlMDEyOWFkLWZjYTItNGRmMC04ZTY0LTU2NDg0MjdmNzMxMyIsImlhdCI6MTcxNTE3NTY5MSwic3ViIjoiSVBGUy10b2tlbiJ9.DzzEmNKiaYVCxsN_CZ9MXIH8Tys3QJ2eRXSChvuNxIA","path":null}
+
+AI Agent Contract deployed at: https://agents.phala.network/ipfs/bafkreibn2k2pr7i5ufm5yzizmuxayleqv4khb7rrsdatbpowd7syc3vady
+
+Make sure to add your secrets to ensure your AI-Agent works properly.
 ```
 
 ### Access the Published AI Agent
