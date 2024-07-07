@@ -1,5 +1,5 @@
 {
-  "name": "phat-gpt-template",
+  "name": "ai-agent-apillon-template",
   "version": "0.0.1",
   "license": "MIT",
   "type": "module",
@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@apillon/sdk": "^3.0.0",
-    "@phala/fn": "^0.2.19",
+    "@phala/fn": "^0.2.22",
     "dotenv": "^16.4.5",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3"
