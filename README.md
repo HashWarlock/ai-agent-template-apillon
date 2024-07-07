@@ -50,7 +50,7 @@ npm install
 ### Testing Locally
 Create `.env` file and add your OpenAI API Key
 ```shell
-cp .env.local .env
+cp .env.example .env
 ```
 
 In `.env` file replace `YOUR_OPENAI_KEY` with your API Key
@@ -119,7 +119,7 @@ POST RESULT: {
 ### Publish Your AI Agent
 Upload your compiled AI Agent code to IPFS.
 ```shell
-npm run publish
+npm run publish-agent
 ```
 
 #### New to Apillon?
